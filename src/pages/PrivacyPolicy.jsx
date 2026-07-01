@@ -1,6 +1,25 @@
 import React from 'react';
 
 export default function PrivacyPolicy() {
+  const pageTitle = 'Polityka Prywatności - ADAR Meble';
+  const pageDesc = 'Polityka prywatności i ochrony danych osobowych (RODO) w serwisie ADAR Meble Dariusz Murawski.';
+
+  if (typeof document !== 'undefined') {
+    document.title = pageTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', pageDesc);
+    }
+  }
+
+  React.useEffect(() => {
+    document.title = pageTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', pageDesc);
+    }
+  }, []);
+
   return (
     <main className="py-20 bg-white min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

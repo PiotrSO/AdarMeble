@@ -1,6 +1,25 @@
 import React from 'react';
 
 export default function CookiesPolicy() {
+  const pageTitle = 'Polityka Cookies - ADAR Meble';
+  const pageDesc = 'Informacje o plikach cookies oraz technologiach pokrewnych wykorzystywanych w serwisie internetowym ADAR Meble.';
+
+  if (typeof document !== 'undefined') {
+    document.title = pageTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', pageDesc);
+    }
+  }
+
+  React.useEffect(() => {
+    document.title = pageTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', pageDesc);
+    }
+  }, []);
+
   return (
     <main className="py-20 bg-white min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
