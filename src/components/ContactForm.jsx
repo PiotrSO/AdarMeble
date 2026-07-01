@@ -9,7 +9,7 @@ export default function ContactForm() {
     handleSubmit,
     watch,
     setValue,
-    formState: { errors, isValid },
+    formState: { errors },
     trigger,
   } = useForm({
     mode: 'onChange',
@@ -686,12 +686,13 @@ export default function ContactForm() {
                       <input 
                         type="checkbox" 
                         className="mr-3 mt-0.5 rounded text-blue-600 focus:ring-blue-500 h-4 w-4" 
-                        {...register('gdprConsent', { required: true })}
+                        {...register('gdprConsent', { required: 'Musisz zaakceptować zgodę RODO, aby przesłać formularz' })}
                       />
                       <span>
                         Wyrażam zgodę na przetwarzanie moich danych osobowych przez Produkcja mebli "ADAR" w celu przygotowania oferty handlowej. Zgodnie z naszą <a href="/polityka-prywatnosci" target="_blank" className="text-blue-600 font-bold hover:underline">Polityką Prywatności</a>. *
                       </span>
                     </label>
+                    {errors.gdprConsent && <p className="mt-1.5 text-xs text-red-500 font-semibold">{errors.gdprConsent.message}</p>}
                   </div>
                 </div>
               )}
@@ -725,8 +726,7 @@ export default function ContactForm() {
                     </p>
                     <button
                       type="submit"
-                      disabled={!isValid}
-                      className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-sm font-bold rounded-lg text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-blue-200/50 hover:shadow-lg transition-all cursor-pointer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-sm font-bold rounded-lg text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-md shadow-blue-200/50 hover:shadow-lg transition-all cursor-pointer"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
