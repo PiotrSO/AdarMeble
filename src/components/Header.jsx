@@ -77,7 +77,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 items-center">
+          <nav className="hidden md:flex gap-x-8 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}

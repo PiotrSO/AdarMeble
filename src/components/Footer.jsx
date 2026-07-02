@@ -3,6 +3,29 @@ import React from 'react';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const handleScrollToSection = (e, href) => {
+    if (href.startsWith('/#')) {
+      const targetId = href.substring(2);
+      const isPortfolioTab = ['kuchnie', 'biura', 'szafy'].includes(targetId);
+      const element = document.getElementById(isPortfolioTab ? 'portfolio' : targetId);
+      
+      if (element) {
+        e.preventDefault();
+        if (isPortfolioTab) {
+          window.dispatchEvent(new CustomEvent('setPortfolioTab', { detail: targetId }));
+        }
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   return (
     <footer className="bg-slate-100 border-t border-slate-200 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,11 +67,11 @@ export default function Footer() {
 
             <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider pt-4">Nawigacja</h4>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              <a href="/#biura" className="text-slate-500 hover:text-blue-600 font-medium">Biura</a>
-              <a href="/#kuchnie" className="text-slate-500 hover:text-blue-600 font-medium">Kuchnie</a>
-              <a href="/#szafy" className="text-slate-500 hover:text-blue-600 font-medium">Szafy</a>
-              <a href="/#o-nas" className="text-slate-500 hover:text-blue-600 font-medium">O nas</a>
-              <a href="/#kontakt" className="text-slate-500 hover:text-blue-600 font-medium">Kontakt</a>
+              <a href="/#biura" onClick={(e) => handleScrollToSection(e, '/#biura')} className="text-slate-500 hover:text-blue-600 font-medium">Biura</a>
+              <a href="/#kuchnie" onClick={(e) => handleScrollToSection(e, '/#kuchnie')} className="text-slate-500 hover:text-blue-600 font-medium">Kuchnie</a>
+              <a href="/#szafy" onClick={(e) => handleScrollToSection(e, '/#szafy')} className="text-slate-500 hover:text-blue-600 font-medium">Szafy</a>
+              <a href="/#o-nas" onClick={(e) => handleScrollToSection(e, '/#o-nas')} className="text-slate-500 hover:text-blue-600 font-medium">O nas</a>
+              <a href="/#kontakt" onClick={(e) => handleScrollToSection(e, '/#kontakt')} className="text-slate-500 hover:text-blue-600 font-medium">Kontakt</a>
             </div>
           </div>
 

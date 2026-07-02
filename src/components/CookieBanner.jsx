@@ -5,19 +5,32 @@ export default function CookieBanner() {
 
   useEffect(() => {
     // Check localStorage (runs only on client)
-    const consent = localStorage.getItem('adar_cookie_consent');
-    if (!consent) {
+    try {
+      const consent = localStorage.getItem('adar_cookie_consent');
+      if (!consent) {
+        setIsVisible(true);
+      }
+    } catch {
+      // Fallback: show banner if localStorage is disabled/blocked (Safari Private Mode)
       setIsVisible(true);
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('adar_cookie_consent', 'accepted');
+    try {
+      localStorage.setItem('adar_cookie_consent', 'accepted');
+    } catch (e) {
+      console.warn('LocalStorage is blocked:', e);
+    }
     setIsVisible(false);
   };
 
   const handleDecline = () => {
-    localStorage.setItem('adar_cookie_consent', 'declined');
+    try {
+      localStorage.setItem('adar_cookie_consent', 'declined');
+    } catch (e) {
+      console.warn('LocalStorage is blocked:', e);
+    }
     setIsVisible(false);
   };
 

@@ -56,7 +56,7 @@ export default function HowWeWork() {
           {/* Connecting Line (Desktop only) */}
           <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-slate-100 -z-10 transform -translate-y-6" />
 
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div 
               key={step.number} 
               className="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover-card-effect flex flex-col items-center text-center"
@@ -75,14 +75,6 @@ export default function HowWeWork() {
               <h3 className="text-xl font-bold text-slate-950 mb-3">{step.title}</h3>
               <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
 
-              {/* Mobile connecting arrow (only between steps) */}
-              {index < 2 && (
-                <div className="md:hidden mt-6 text-slate-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 13l-7 7-7-7" />
-                  </svg>
-                </div>
-              )}
             </div>
           ))}
         </div>

@@ -18,6 +18,14 @@ export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('biura');
 
   useEffect(() => {
+    // Check if hash exists on initial mount
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      if (['kuchnie', 'biura', 'szafy'].includes(hash)) {
+        setActiveTab(hash);
+      }
+    }
+
     const handleSetTab = (event) => {
       const tabName = event.detail;
       if (tabName === 'kuchnie' || tabName === 'biura' || tabName === 'szafy' || tabName === 'szafa') {

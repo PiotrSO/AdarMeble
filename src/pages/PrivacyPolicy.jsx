@@ -4,14 +4,6 @@ export default function PrivacyPolicy() {
   const pageTitle = 'Polityka Prywatności - ADAR Meble';
   const pageDesc = 'Polityka prywatności i ochrony danych osobowych (RODO) w serwisie ADAR Meble Dariusz Murawski.';
 
-  if (typeof document !== 'undefined') {
-    document.title = pageTitle;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', pageDesc);
-    }
-  }
-
   React.useEffect(() => {
     document.title = pageTitle;
     const metaDesc = document.querySelector('meta[name="description"]');
