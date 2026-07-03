@@ -1,5 +1,5 @@
 import React from 'react';
-import heroBg from '../assets/office_hero.png';
+import heroBg from '../assets/office_hero.jpg';
 
 export default function Hero() {
   const handleScrollToSection = (tabName) => {

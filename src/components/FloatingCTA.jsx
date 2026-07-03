@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function FloatingCTA() {
   const handleClick = () => {
-    const element = document.getElementById('kontakt');
+    const element = document.getElementById('konfigurator');
     if (element) {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;

@@ -27,7 +27,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-100 border-t border-slate-200 pt-16 pb-8">
+    <footer className="bg-slate-100 border-t border-slate-200 pt-16 pb-8" id="kontakt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
           

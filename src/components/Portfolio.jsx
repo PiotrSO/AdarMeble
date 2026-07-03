@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import kitchenHero from '../assets/kitchen_hero.png';
+import kitchenHero from '../assets/kitchen_hero.jpg';
 import kitchenLoft from '../assets/kitchen_loft.jpg';
-import kitchenGreen from '../assets/kitchen_green.png';
+import kitchenGreen from '../assets/kitchen_green.jpg';
 import kitchenEnglish from '../assets/kitchen_english.jpg';
-import officeHero from '../assets/office_portfolio.png';
+import officeHero from '../assets/office_portfolio.jpg';
 import officeExecutive from '../assets/office_executive.jpg';
 import officeDelta from '../assets/office_delta.jpg';
 import officeCowork from '../assets/office_cowork.jpg';
 import officeReception from '../assets/office_reception.jpg';
-import wardrobeHero from '../assets/wardrobe_builtin.png';
-import wardrobeGlass from '../assets/wardrobe_glass.png';
-import wardrobeSloped from '../assets/wardrobe_sloped.png';
-import wardrobeClassic from '../assets/wardrobe_classic.png';
-import wardrobeMirror from '../assets/wardrobe_mirror.png';
+import wardrobeHero from '../assets/wardrobe_builtin.jpg';
+import wardrobeGlass from '../assets/wardrobe_glass.jpg';
+import wardrobeSloped from '../assets/wardrobe_sloped.jpg';
+import wardrobeClassic from '../assets/wardrobe_classic.jpg';
+import wardrobeMirror from '../assets/wardrobe_mirror.jpg';
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('biura');
@@ -178,7 +178,7 @@ export default function Portfolio() {
     window.dispatchEvent(event);
 
     // Scroll to form
-    const element = document.getElementById('kontakt');
+    const element = document.getElementById('konfigurator');
     if (element) {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;

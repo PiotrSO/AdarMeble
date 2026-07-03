@@ -1,5 +1,5 @@
 import React from 'react';
-import factoryCrew from '../assets/factory_crew.png';
+import factoryCrew from '../assets/factory_crew.jpg';
 
 export default function AboutUs() {
   return (

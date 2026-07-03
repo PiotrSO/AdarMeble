@@ -186,7 +186,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-slate-50 border-t border-slate-100" id="kontakt">
+    <section className="py-20 bg-slate-50 border-t border-slate-100" id="konfigurator">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 uppercase tracking-wide">
