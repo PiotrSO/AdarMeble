@@ -2,13 +2,14 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <section className="py-20 bg-white border-t border-slate-100" id="kontakt-dane">
+    <section className="py-20 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           
           {/* Left Column: Contact details and sales text */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-8">
-            <div className="space-y-6">
+            <div className="space-y-6 relative">
+              <div id="kontakt-dane" className="absolute -top-4 left-0 w-1 h-1 pointer-events-none opacity-0" />
               <span className="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 uppercase tracking-wide">
                 Kontakt
               </span>

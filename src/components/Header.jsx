@@ -18,7 +18,7 @@ export default function Header() {
     { name: 'Kuchnie', href: '/#kuchnie' },
     { name: 'Szafy', href: '/#szafy' },
     { name: 'O nas', href: '/#o-nas' },
-    { name: 'Kontakt', href: '/#kontakt' },
+    { name: 'Kontakt', href: '/#kontakt-dane' },
   ];
 
   const handleScrollToSection = (e, href) => {
@@ -26,34 +26,27 @@ export default function Header() {
       e.preventDefault();
       const targetId = href.substring(2);
       
-      if (targetId === 'kuchnie' || targetId === 'biura' || targetId === 'szafy') {
-        window.dispatchEvent(new CustomEvent('setPortfolioTab', { detail: targetId }));
-        const element = document.getElementById('portfolio');
+      setIsMenuOpen(false);
+      
+      setTimeout(() => {
+        const isPortfolioTab = ['kuchnie', 'biura', 'szafy'].includes(targetId);
+        const element = document.getElementById(isPortfolioTab ? 'portfolio' : targetId);
+        
         if (element) {
-          setIsMenuOpen(false);
-          const headerOffset = 80;
+          if (isPortfolioTab) {
+            window.dispatchEvent(new CustomEvent('setPortfolioTab', { detail: targetId }));
+          }
+          
+          const headerOffset = 105;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
           
           window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: 'auto'
           });
         }
-      } else {
-        const element = document.getElementById(targetId);
-        if (element) {
-          setIsMenuOpen(false);
-          const headerOffset = 80;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }
+      }, 100);
     }
   };
 
@@ -128,7 +121,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-72 opacity-100 border-t border-slate-100 mt-2 bg-white' : 'max-h-0 opacity-0'}`} id="mobile-menu">
+      <div className={`md:hidden ${isMenuOpen ? 'block border-t border-slate-100 mt-2 bg-white' : 'hidden'}`} id="mobile-menu">
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <a

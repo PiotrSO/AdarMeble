@@ -42,7 +42,7 @@ export default function CookieBanner() {
         
         {/* Text */}
         <div className="text-slate-600 text-xs sm:text-sm font-medium max-w-4xl text-center md:text-left leading-relaxed">
-          Ta strona korzysta z plików cookies (ciasteczek) w celu świadczenia usług na najwyższym poziomie, optymalizacji Local SEO oraz analizy ruchu. Możesz w każdej chwili zmienić ustawienia swojej przeglądarki. Szczegóły znajdziesz w naszej <a href="/polityka-prywatnosci" className="text-blue-600 font-bold hover:underline">Polityce Prywatności</a> oraz <a href="/polityka-cookies" className="text-blue-600 font-bold hover:underline">Polityce Cookies</a>.
+          Ta strona korzysta z plików cookies (ciasteczek) w celu świadczenia usług na najwyższym poziomie, optymalizacji Local SEO oraz analizy ruchu. Możesz w każdej chwili zmienić ustawienia swojej przeglądarki. Szczegóły znajdziesz w naszej <a href="/polityka-prywatnosci.html" className="text-blue-600 font-bold hover:underline">Polityce Prywatności</a> oraz <a href="/polityka-cookies.html" className="text-blue-600 font-bold hover:underline">Polityce Cookies</a>.
         </div>
 
         {/* Buttons */}

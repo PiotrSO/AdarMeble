@@ -3,12 +3,13 @@ import factoryCrew from '../assets/factory_crew.jpg';
 
 export default function AboutUs() {
   return (
-    <section className="py-20 bg-slate-50 overflow-hidden" id="o-nas">
+    <section className="py-20 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Text Content Column */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-6 relative">
+            <div id="o-nas" className="absolute -top-4 left-0 w-1 h-1 pointer-events-none opacity-0" />
             <span className="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 uppercase tracking-wide">
               Kim jesteśmy
             </span>

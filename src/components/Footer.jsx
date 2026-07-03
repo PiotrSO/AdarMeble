@@ -14,13 +14,13 @@ export default function Footer() {
         if (isPortfolioTab) {
           window.dispatchEvent(new CustomEvent('setPortfolioTab', { detail: targetId }));
         }
-        const headerOffset = 80;
+        const headerOffset = 105;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: 'auto'
         });
       }
     }
@@ -70,6 +70,7 @@ export default function Footer() {
               <a href="/#kuchnie" onClick={(e) => handleScrollToSection(e, '/#kuchnie')} className="text-slate-500 hover:text-blue-600 font-medium">Kuchnie</a>
               <a href="/#szafy" onClick={(e) => handleScrollToSection(e, '/#szafy')} className="text-slate-500 hover:text-blue-600 font-medium">Szafy</a>
               <a href="/#o-nas" onClick={(e) => handleScrollToSection(e, '/#o-nas')} className="text-slate-500 hover:text-blue-600 font-medium">O nas</a>
+              <a href="/#kontakt-dane" onClick={(e) => handleScrollToSection(e, '/#kontakt-dane')} className="text-slate-500 hover:text-blue-600 font-medium">Kontakt</a>
             </div>
           </div>
 
@@ -95,9 +96,9 @@ export default function Footer() {
         <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-medium gap-4">
           <p>© {currentYear} Produkcja mebli "ADAR" Dariusz Murawski. Wszelkie prawa zastrzeżone.</p>
           <div className="flex gap-4">
-            <a href="/polityka-prywatnosci" className="hover:underline hover:text-slate-600">Polityka Prywatności</a>
+            <a href="/polityka-prywatnosci.html" className="hover:underline hover:text-slate-600">Polityka Prywatności</a>
             <span>•</span>
-            <a href="/polityka-cookies" className="hover:underline hover:text-slate-600">Polityka Cookies</a>
+            <a href="/polityka-cookies.html" className="hover:underline hover:text-slate-600">Polityka Cookies</a>
           </div>
           <p>
             Realizacja: <a href="https://saturdev.pl" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 font-bold">SaturDev</a>

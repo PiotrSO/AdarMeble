@@ -18,7 +18,15 @@ export const routes = [
         element: <PrivacyPolicy />,
       },
       {
+        path: 'polityka-prywatnosci.html',
+        element: <PrivacyPolicy />,
+      },
+      {
         path: 'polityka-cookies',
+        element: <CookiesPolicy />,
+      },
+      {
+        path: 'polityka-cookies.html',
         element: <CookiesPolicy />,
       },
     ],

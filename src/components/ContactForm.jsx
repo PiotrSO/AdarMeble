@@ -689,7 +689,7 @@ export default function ContactForm() {
                         {...register('gdprConsent', { required: 'Musisz zaakceptować zgodę RODO, aby przesłać formularz' })}
                       />
                       <span>
-                        Wyrażam zgodę na przetwarzanie moich danych osobowych przez Produkcja mebli "ADAR" w celu przygotowania oferty handlowej. Zgodnie z naszą <a href="/polityka-prywatnosci" target="_blank" className="text-blue-600 font-bold hover:underline">Polityką Prywatności</a>. *
+                        Wyrażam zgodę na przetwarzanie moich danych osobowych przez Produkcja mebli "ADAR" w celu przygotowania oferty handlowej. Zgodnie z naszą <a href="/polityka-prywatnosci.html" target="_blank" className="text-blue-600 font-bold hover:underline">Polityką Prywatności</a>. *
                       </span>
                     </label>
                     {errors.gdprConsent && <p className="mt-1.5 text-xs text-red-500 font-semibold">{errors.gdprConsent.message}</p>}
