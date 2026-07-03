@@ -16,7 +16,7 @@ export default function AboutUs() {
               Nowoczesna produkcja, osobiste podejście
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Jako rodzinna fabryka mebli prowadzona przez Dariusza Murawskiego w Jakubowie pod Warszawą, łączymy wieloletnie doświadczenie z precyzją nowoczesnego parku maszynowego. Specjalizujemy się w trwałych konstrukcjach tworzonych z wysokiej jakości laminatów oraz solidnych elementów ze stali. W naszej ofercie znajdziesz zarówno sprawdzone meble systemowe, które pozwalają na elastyczną aranżację przestrzeni, jak i realizacje tworzone w pełni na wymiar. Niezależnie od wybranej opcji, każda szafa, biurko czy lada recepcyjna to owoc osobistej rozmowy z Klientem, precyzyjnego pomiaru i dbałości o każdy detal.
+              Jako rodzinna fabryka mebli, w której z pasją tworzymy każdy projekt, łączymy wieloletnie doświadczenie z precyzją nowoczesnego parku maszynowego. Specjalizujemy się w trwałych konstrukcjach tworzonych z wysokiej jakości laminatów oraz solidnych elementów ze stali. W naszej ofercie znajdziesz zarówno sprawdzone meble systemowe, które pozwalają na elastyczną aranżację przestrzeni, jak i realizacje tworzone w pełni na wymiar. Niezależnie od wybranej opcji, każda szafa, biurko czy lada recepcyjna to owoc osobistej rozmowy z Klientem, precyzyjnego pomiaru i dbałości o detale.
             </p>
 
             {/* Core Benefits List */}

@@ -4,13 +4,27 @@
 
 @theme {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --color-primary-50: #f0f5ff;
-  --color-primary-100: #e0eaff;
-  --color-primary-600: #1d4ed8;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-accent: #1e3a8a;
+  
+  /* Primary brand colors (mahogany brown-red like the logo) */
+  --color-primary-50: #faf2f2;
+  --color-primary-100: #f5dfdf;
+  --color-primary-600: #731b1c;
+  --color-primary-700: #731b1c;
+  --color-primary-800: #5c1314;
+  --color-primary-900: #470b0c;
+  --color-accent: #731b1c;
+
+  /* Overriding default blue to the logo's brand colors */
+  --color-blue-50: #faf2f2;
+  --color-blue-100: #f5dfdf;
+  --color-blue-200: #e2b4b5;
+  --color-blue-300: #c05b5d;
+  --color-blue-400: #a63a3c;
+  --color-blue-500: #8c2425;
+  --color-blue-600: #731b1c;
+  --color-blue-700: #731b1c;
+  --color-blue-800: #5c1314;
+  --color-blue-900: #470b0c;
 }
 
 html {

@@ -67,7 +67,7 @@ export default function Hero() {
             <div className="mt-4">
               <button
                 onClick={() => handleScrollToSection('szafy')}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-4 border-2 border-blue-600 text-sm font-bold rounded-xl text-blue-700 bg-white hover:bg-blue-50 active:bg-blue-100 transition-all duration-200 cursor-pointer transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-4 border border-transparent text-sm font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-md shadow-blue-200/50 hover:shadow-lg transition-all duration-200 cursor-pointer transform hover:-translate-y-0.5"
               >
                 Stwórz szafę wnękową
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -82,13 +82,13 @@ export default function Hero() {
                 <svg className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                Bezpłatny pomiar & projekt
+                Bezpłatny pomiar i projekt
               </div>
               <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 font-semibold">
                 <svg className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                Polskie meble i komponenty
+                Polskie meble i wysokiej jakości komponenty
               </div>
             </div>
           </div>

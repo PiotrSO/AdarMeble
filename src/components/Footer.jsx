@@ -41,7 +41,6 @@ export default function Footer() {
               Rodzinna fabryka mebli z Jakubowa. Od projektu po precyzyjny montaż — tworzymy piękno w Twoim domu i funkcjonalność w Twoim biurze.
             </p>
             <div className="text-sm text-slate-600 font-semibold space-y-1.5 pt-2">
-              <p>Właściciel: Dariusz Murawski</p>
               <p>Adres: Przedewsie 12, 05-306 Jakubów</p>
               <p>NIP: 8221216168</p>
             </div>
@@ -71,7 +70,6 @@ export default function Footer() {
               <a href="/#kuchnie" onClick={(e) => handleScrollToSection(e, '/#kuchnie')} className="text-slate-500 hover:text-blue-600 font-medium">Kuchnie</a>
               <a href="/#szafy" onClick={(e) => handleScrollToSection(e, '/#szafy')} className="text-slate-500 hover:text-blue-600 font-medium">Szafy</a>
               <a href="/#o-nas" onClick={(e) => handleScrollToSection(e, '/#o-nas')} className="text-slate-500 hover:text-blue-600 font-medium">O nas</a>
-              <a href="/#kontakt" onClick={(e) => handleScrollToSection(e, '/#kontakt')} className="text-slate-500 hover:text-blue-600 font-medium">Kontakt</a>
             </div>
           </div>
 

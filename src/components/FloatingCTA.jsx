@@ -18,7 +18,7 @@ export default function FloatingCTA() {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 inline-flex items-center justify-center gap-2 px-5 py-3.5 sm:px-6 sm:py-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs sm:text-sm font-extrabold rounded-full shadow-lg shadow-blue-500/20 hover:shadow-xl active:scale-95 transition-all duration-200 transform cursor-pointer border border-blue-500/10"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 inline-flex items-center justify-center gap-2 px-5 py-3.5 sm:px-6 sm:py-4 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-blue-900 text-xs sm:text-sm font-extrabold rounded-full shadow-lg shadow-amber-500/20 hover:shadow-xl active:scale-95 transition-all duration-200 transform cursor-pointer border border-amber-500/10"
       aria-label="Zamów bezpłatny pomiar i projekt"
     >
       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
